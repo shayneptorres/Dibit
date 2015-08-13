@@ -1,0 +1,9 @@
+testing specs for dibber
+name: string
+email: string
+
+- name must be present
+- name must be between 3 and 40 characters
+- email must be present
+- email must be unique
+- email must be valid

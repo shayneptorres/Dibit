@@ -1,0 +1,52 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.nav {
+  background-color: #0000B8;
+  height: 60px;
+ .logo {
+   border-radius: 30px;
+    height: 47px;
+    width: 47px;
+    margin-top: 5px;
+    background: asset-url("dibit_logo.png") center center no-repeat;
+    background-size: contain;
+    float:left;
+    }
+}
+
+.nav li {
+  color: white !important;
+  display: inline;
+  padding-right: 10px;
+  padding-top: 20px;
+  line-height: 60px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.nav a {
+  padding-left: -20px;
+  color:white;
+}
+
+.jumbotron {
+  height: 350px;
+  background-image: url(https://lh3.googleusercontent.com/-83YfVqCjLL4/Vcqjhy1Nd_I/AAAAAAAAAMQ/UUNQsXrLc1k/s640-Ic42/landscape.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+
+  .viewer {
+    margin-top: 20px;
+  }
+}
+
+.jumbotron h1 {
+  line-height: -20px;
+
+}
+
+.jumbotron h3 {
+
+}
