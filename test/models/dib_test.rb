@@ -2,11 +2,17 @@ require 'test_helper'
 
 class DibTest < ActiveSupport::TestCase
   def setup
-    @dib= Dib.create(name:"Death Star", note:"The power to blow crap up in space")
+    @dibber= Dibber.create(name:"chuck", email:"chuck@chuck.com")
+    @dib= @dibber.dibs.build(name:"Death Star", note:"The power to blow crap up in space")
   end
 
   test "Dib should be valid" do
     assert @dib.valid?
+  end
+
+  test "Dibber_id should be present" do
+    @dib.dibber_id = nil
+    assert_not @dib.valid?
   end
 
   test "name should be present" do
