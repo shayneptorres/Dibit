@@ -1,0 +1,33 @@
+<p>
+  <h1 id="dib_name">
+    <%= @dib.name %>
+  </h1>
+</p>
+
+
+
+<div class="row">
+  <div class="cold-md-4 pull-right center">
+    <%= gravatar_for @dib.dibber, size: 200 %>
+    <p>
+      <h5>
+        Respect this dib,
+      </h5>
+      <h5 class="show_name">
+        It belongs to: <%= @dib.dibber.name %>
+      </h5>
+    </p>
+  </div>
+  <div class="col-md-8 pull-left center">
+    <div class="show_dib">
+      <%= image_tag(@dib.picture.url, class: "gravatar") if @dib.picture? %>
+    </div>
+    <h5 class="show_note">
+      <%= @dib.note %>
+    </h5>
+  </div>
+</div>
+
+<center><%= link_to "Go back to dibs", dibs_path, class: "btn btn-lg btn-success viewer"%></center>
+<br>
+<center><%= link_to "Edit this Dib", edit_dib_path, class: "btn btn-lg btn-success viewer"%></center>

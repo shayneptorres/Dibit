@@ -1,0 +1,32 @@
+<h1>Check out these dibs</h1>
+<hr/>
+
+<%= will_paginate %>
+
+<% @dibs.each do |dib|%>
+ <div class="row">
+   <div class="col-md-2 all-white">
+     <section class="dibber_info center">
+       <%= gravatar_for dib.dibber, size:100 %>
+       <h5 id:"index_dibber_name"> Dibber: <%= dib.dibber.name %> </h5>
+     </section>
+   </div>
+
+   <div class="col-lg-7 well all-white">
+     <h4><%= link_to dib.name, dib_path(dib) %> </h4>
+     <p><%= dib.note %></p>
+     <p>
+       <span class="quiet"><small>Called <%= time_ago_in_words(dib.created_at) %> ago</small></span>
+       
+       <span class="quiet pull-right"><small>Updated <%= time_ago_in_words(dib.updated_at) %> ago</small></span>
+     </p>
+
+   </div>
+   <div class="col-md-3">
+     <%= image_tag(dib.picture.url, size: "200x150", class: "gravatar") if dib.picture? %>
+   </div>
+
+ </div>
+<% end %>
+
+<%= will_paginate %>

@@ -50,3 +50,61 @@
 .jumbotron h3 {
 
 }
+
+.all-white {
+  color: white;
+}
+
+.gravatar{
+  border-radius: 10px;
+}
+
+h5{
+  color: black;
+}
+
+.well {
+  background-color: #0000B8;
+  border-radius: 15px;
+
+}
+
+
+#dib_name {
+  text-align: center;
+}
+h4 a{
+  color: white;
+}
+
+label{
+  color: white;
+  position: center;
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+
+}
+
+input{
+  height: auto !important;
+}
+
+span.picture {
+    margin-top: 10px;
+  input{
+    border: 0
+}
+}
+
+.show_dib {
+  margin: 10px 10px 10px 10px;
+}
+
+.dibber_info{
+  padding-left: 60px;
+}
