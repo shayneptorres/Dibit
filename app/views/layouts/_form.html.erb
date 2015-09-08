@@ -3,7 +3,7 @@
   <div class="alert alert-danger col-md-8 col-md-offset-2">
     <h5>Please fix the following errors: </h5>
       <ul>
-        <%= @dib.errors.full_messages.each do |msg| %>
+        <% @dib.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
         <% end %>
       </ul>
@@ -25,7 +25,7 @@
         <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png" %>
       </span>
 
-  
+
       <%= f.submit(@dib.new_record? ? 'Call Yo Dib' : 'Edit Yo Dib', class:'btn btn-success') %>
       <% end %>
   </div>

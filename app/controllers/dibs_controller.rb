@@ -32,7 +32,7 @@ class DibsController < ApplicationController
   def update
     @dib=Dib.find(params[:id])
     if  @dib.update(dib_params)
-      flash[:success] = "Your dib was edit successfully!"
+      flash[:success] = "Your dib was edited successfully!"
       redirect_to dib_path(@dib)
     else
       render :edit

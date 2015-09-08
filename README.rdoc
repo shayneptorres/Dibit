@@ -1,9 +1,15 @@
-testing specs for dibber
-name: string
-email: string
+Authentication
 
-- name must be present
-- name must be between 3 and 40 characters
-- email must be present
-- email must be unique
-- email must be valid
+What we have
+- dibber model and validations
+- dibber columns with names and emails
+
+What we need to do:
+- add passwords to dibber table so dibbers can be authenticated
+- use email as creidentials
+- ability to register new dibbers to use the app
+- ability to display dibbers profile
+- ability to lists all dibbers
+- abililty to log in and log out
+- restricting actions like create dib, edit dib,
+- restricting edit of dibs to dibbers who called the dibs

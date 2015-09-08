@@ -12,4 +12,9 @@ Rails.application.routes.draw do
   #delete '/dibs/:id', to: 'dibs#destroy'
 
   resources :dibs
+
+  resources :dibbers, except: [:new]
+
+  get '/register', to: "dibbers#new"
+
 end

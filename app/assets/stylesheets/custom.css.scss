@@ -56,13 +56,25 @@
 }
 
 .gravatar{
-  border-radius: 10px;
+  border-radius: 15px;
+
+}
+
+#index_header{
+  text-align: center;
 }
 
 h5{
   color: black;
 }
 
+.me{
+  text-align: left;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .well {
   background-color: #0000B8;
   border-radius: 15px;
