@@ -30,4 +30,6 @@
 
 <center><%= link_to "Go back to dibs", dibs_path, class: "btn btn-lg btn-success viewer"%></center>
 <br>
-<center><%= link_to "Edit this Dib", edit_dib_path, class: "btn btn-lg btn-success viewer"%></center>
+<% if logged_in? && @dib.dibber == current_user %>
+  <center><%= link_to "Edit this Dib", edit_dib_path, class: "btn btn-lg btn-success viewer"%></center>
+<% end %>

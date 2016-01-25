@@ -1,10 +1,18 @@
 class DibsController < ApplicationController
   def index
     @dibs=Dib.paginate(page: params[:page], per_page: 5)
+    if !logged_in?
+      redirect_to root_path
+      flash[:danger] = "You must be logged in to view these dibs!"
+    end
   end
 
   def show
     @dib = Dib.find(params[:id])
+    if !logged_in?
+      redirect_to root_path
+      flash[:danger] = "You must be logged in to view this dib!"
+    end
   end
 
   def new
@@ -13,7 +21,7 @@ class DibsController < ApplicationController
 
   def create
     @dib = Dib.new(dib_params)
-    @dib.dibber = Dibber.find(1)
+    @dib.dibber = current_user
 
     if @dib.save
       flash[:success] = "You called your dib successfully"
@@ -27,6 +35,10 @@ class DibsController < ApplicationController
 
   def edit
     @dib=Dib.find(params[:id])
+    if @dib.dibber != current_user
+      redirect_to dib_path(@dib)
+      flash[:danger] = "You do not have permission to edit this dib!"
+    end
   end
 
   def update
