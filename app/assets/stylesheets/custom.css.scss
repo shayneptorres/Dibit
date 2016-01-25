@@ -2,7 +2,6 @@
 @import "bootstrap";
 
 .nav {
-  background-color: #0000B8;
   height: 60px;
  .logo {
    border-radius: 30px;
@@ -13,21 +12,6 @@
     background-size: contain;
     float:left;
     }
-}
-
-.nav li {
-  color: white !important;
-  display: inline;
-  padding-right: 10px;
-  padding-top: 20px;
-  line-height: 60px;
-  font-size: 18px;
-  border-radius: 10px;
-}
-
-.nav a {
-  padding-left: -20px;
-  color:white;
 }
 
 .jumbotron {

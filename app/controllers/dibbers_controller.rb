@@ -4,10 +4,15 @@ class DibbersController < ApplicationController
     @dibber = Dibber.new
   end
 
+  def index
+    @dibbers=Dibber.paginate(page: params[:page], per_page: 5)
+  end
+
   def create
     @dibber = Dibber.new(dibber_params)
     if @dibber.save
       flash[:success] = "You are now a Dibber, go dib stuff!"
+      session[:dibber_id] = @dibber.id
       redirect_to dibs_path
     else
       render 'new'
@@ -30,7 +35,7 @@ class DibbersController < ApplicationController
 
   def show
     @dibber = Dibber.find(params[:id])
-    
+
   end
 
   private

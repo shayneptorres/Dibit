@@ -2,8 +2,12 @@
   <div class="jumbotron">
     <center><h1>Welcome to DibIt!</h1></center>
     <center><h3>Respect all dibs, Ye who enter here!<h3></center>
-      <center><%= link_to "Sign Up Now", register_path, class: "btn btn-lg btn-success"%></center>
-      <center><%= link_to "View Dibs", dibs_path, class: "btn btn-lg btn-success viewer"%></center>
+      <% if logged_in? %>
+        <center><%= link_to "View Dibs", dibs_path, class: "btn btn-lg btn-success viewer"%></center>
+      <% else  %>
+        <center><%= link_to "Sign Up Now", register_path, class: "btn btn-lg btn-success"%></center>
+      <% end %>
+
   </div>
 
   <div>

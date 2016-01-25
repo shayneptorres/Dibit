@@ -15,10 +15,10 @@
 </div>
 
 
-<%= @dibber.dibs.each do |dib| %>
+<% @dibber.dibs.each do |dib| %>
 
   <div class="row">
-    <div class="col-lg-7 well  col-lg-offset-3 all-white">
+    <div class="col-lg-4 well col-lg-offset-4 all-white">
       <h4><%= link_to dib.name, dib_path(dib) %> </h4>
       <p><%= dib.note %></p>
       <p>

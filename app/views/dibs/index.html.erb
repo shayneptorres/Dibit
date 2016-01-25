@@ -7,14 +7,14 @@
 
 <% @dibs.each do |dib|%>
  <div class="row">
-   <div class="col-md-2 all-white">
+   <div class="col-sm-2 col-sm-offset-2 all-white">
      <section class="dibber_info center">
        <%= gravatar_for dib.dibber, size:100 %>
        <h5 id:"index_dibber_name"> Dibber: <%= dib.dibber.name %> </h5>
      </section>
    </div>
 
-   <div class="col-lg-7 well all-white">
+   <div class="col-sm-4 col-sm-offset-1 well all-white">
      <h4><%= link_to dib.name, dib_path(dib) %> </h4>
      <p><%= dib.note %></p>
      <p>
@@ -24,7 +24,7 @@
      </p>
 
    </div>
-   <div class="col-md-3">
+   <div class="col-sm-3">
      <%= image_tag(dib.picture.url, size: "200x150", class: "gravatar") if dib.picture? %>
    </div>
 
