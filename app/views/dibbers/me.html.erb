@@ -1,0 +1,30 @@
+<div class="row">
+  <p>
+    <h1 id="dib_name">
+      <%= @dibber.name %>
+    </h1>
+  </p>
+</div>
+<hr/>
+
+<div class="row">
+  <div class="me center">
+    <%= gravatar_for @dibber, size: 200 %>
+    <hr/>
+  </div>
+</div>
+<h2>Here be your dibs:</h2>
+<% @dibber.dibs.each do |dib| %>
+  <div class="row">
+    <div class="col-lg-4 well col-lg-offset-4 all-white">
+      <h4><%= link_to dib.name, dib_path(dib) %> </h4>
+      <p><%= dib.note %></p>
+      <p>
+        <span class="quiet"><small>Called <%= time_ago_in_words(dib.created_at) %> ago</small></span>
+
+        <span class="quiet pull-right"><small>Updated <%= time_ago_in_words(dib.updated_at) %> ago</small></span>
+      </p>
+    </div>
+  </div>
+<% end %>
+<hr>

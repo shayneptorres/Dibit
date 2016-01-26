@@ -45,6 +45,10 @@ class DibbersController < ApplicationController
     end
   end
 
+  def me
+    @dibber = current_user
+  end
+
   private
   def dibber_params
     params.require(:dibber).permit(:name, :email, :password)

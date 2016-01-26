@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   get "/home", to: 'pages#home'
+  get '/me', to: 'dibbers#me', as: 'me'
   #get '/dibs', to: 'dibs#index'
   #get '/dibs/new', to: 'dibs#new', as: 'new_dib'
   #post '/dibs', to: 'dibs#create'
