@@ -10,9 +10,10 @@ Rails.application.routes.draw do
   #get '/dibs/:id/edit', to: 'dibs#edit', as: 'edit_dib'
   #patch '/dibs/:id', to: 'dibs#update'
   #get 'dibs/:id', to: 'dibs#show', as: 'dib'
-  #delete '/dibs/:id', to: 'dibs#destroy'
+
 
   resources :dibs
+  delete '/dibs/:id', to: 'dibs#destroy', as: 'destroy_dib'
 
   resources :dibbers, except: [:new]
 
