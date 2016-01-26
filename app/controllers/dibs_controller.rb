@@ -8,7 +8,7 @@ class DibsController < ApplicationController
   end
 
   def show
-    @dib = Dib.find(params[:id])
+    @dib = Dib.friendly.find(params[:id])
     if !logged_in?
       redirect_to root_path
       flash[:danger] = "You must be logged in to view this dib!"
@@ -34,7 +34,7 @@ class DibsController < ApplicationController
   end
 
   def edit
-    @dib=Dib.find(params[:id])
+    @dib= Dib.friendly.find(params[:id])
     if @dib.dibber != current_user
       redirect_to dib_path(@dib)
       flash[:danger] = "You do not have permission to edit this dib!"
@@ -42,7 +42,7 @@ class DibsController < ApplicationController
   end
 
   def update
-    @dib=Dib.find(params[:id])
+    @dib=Dib.friendly.find(params[:id])
     if  @dib.update(dib_params)
       flash[:success] = "Your dib was edited successfully!"
       redirect_to dib_path(@dib)

@@ -20,7 +20,7 @@ class DibbersController < ApplicationController
   end
 
   def edit
-    @dibber = Dibber.find(params[:id])
+    @dibber = Dibber.friendly.find(params[:id])
     if @dibber != current_user
       redirect_to dibber_path(@dibber)
       flash[:danger] = "You do not have permission to edit this dibber!"
@@ -28,7 +28,7 @@ class DibbersController < ApplicationController
   end
 
   def update
-    @dibber = Dibber.find(params[:id])
+    @dibber = Dibber.friendly.find(params[:id])
     if @dibber.update(dibber_params)
       flash[:success] = "Your profile has been updated successfully! ;)"
       redirect_to dibs_path
@@ -38,7 +38,7 @@ class DibbersController < ApplicationController
   end
 
   def show
-    @dibber = Dibber.find(params[:id])
+    @dibber = Dibber.friendly.find(params[:id])
     if !logged_in?
       redirect_to root_path
       flash[:danger] = "You must be logged in to view these dibbers!"

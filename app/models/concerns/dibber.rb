@@ -1,4 +1,6 @@
 class Dibber < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :name, use: [:slugged, :history]
   has_many :dibs
   #this saves all the email in the database as downcase
   before_save {self.email = self.email.downcase }

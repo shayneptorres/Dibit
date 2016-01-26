@@ -1,4 +1,6 @@
 class Dib < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :name, use: [:slugged, :history]
   belongs_to :dibber
   validates :dibber_id, presence: true
   validates :name, presence: true, uniqueness: {case_sensitive: false}, length: {minimum: 5, maximum:100}
