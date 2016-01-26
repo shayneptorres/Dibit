@@ -28,8 +28,10 @@
   </div>
 </div>
 
-<center><%= link_to "Go back to dibs", dibs_path, class: "btn btn-lg btn-success viewer"%></center>
+<center><%= link_to "See other Dibs", dibs_path, class: "btn btn-lg btn-success viewer"%></center>
 <br>
 <% if logged_in? && @dib.dibber == current_user %>
-  <center><%= link_to "Edit this Dib", edit_dib_path, class: "btn btn-lg btn-success viewer"%></center>
+  <center><%= link_to "Edit Dib", edit_dib_path, class: "btn btn-lg btn-success viewer"%></center>
+  <br>
+  <center><%= link_to "Delete Dib", destroy_dib_path, class: "btn btn-lg btn-danger viewer"%></center>
 <% end %>

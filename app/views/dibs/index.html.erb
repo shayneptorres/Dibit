@@ -24,11 +24,14 @@
 
        <span class="quiet pull-right"><small>Updated <%= time_ago_in_words(dib.updated_at) %> ago</small></span>
      </p>
+   </div>
 
+   <div class="dib_pic">
+     <div class="col-sm-3">
+       <%= image_tag(dib.picture.url, size: "200x150", class: "gravatar") if dib.picture? %>
+     </div>
    </div>
-   <div class="col-sm-3">
-     <%= image_tag(dib.picture.url, size: "200x150", class: "gravatar") if dib.picture? %>
-   </div>
+
 
  </div>
  <hr>
