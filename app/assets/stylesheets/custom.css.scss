@@ -1,18 +1,32 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+h5{
+  color: black;
+}
+
+#navbar{
+  background-color: #0000B8;
+  li {
+    a {
+      color: white;
+    }
+  }
+}
 .nav {
   height: 60px;
- .logo {
-   border-radius: 30px;
-    height: 47px;
-    width: 47px;
-    margin-top: 5px;
-    background: asset-url("dibit_logo.png") center center no-repeat;
-    background-size: contain;
-    float:left;
-    }
 }
+
+
+.logo {
+  border-radius: 30px;
+  height: 47px;
+  width: 47px;
+  margin-top: 5px;
+  background: asset-url("dibit_logo.png") center center no-repeat;
+  background-size: contain;
+  float:left;
+  }
 
 .jumbotron {
   height: 350px;
@@ -20,36 +34,22 @@
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
-
   .viewer {
     margin-top: 20px;
   }
 }
-
-.jumbotron h1 {
-  line-height: -20px;
-
-}
-
-.jumbotron h3 {
-
-}
-
-.all-white {
-  color: white;
+.jumbotron{
+  h1{
+    line-height: -20px;
+  }
 }
 
 .gravatar{
   border-radius: 15px;
-
 }
 
 #index_header{
   text-align: center;
-}
-
-h5{
-  color: black;
 }
 
 .me{
@@ -59,18 +59,22 @@ h5{
   margin-left: auto;
   margin-right: auto;
 }
+
 .well {
   background-color: #0000B8;
   border-radius: 15px;
-
 }
-
+.all-white {
+  color: white;
+}
 
 #dib_name {
   text-align: center;
 }
-h4 a{
-  color: white;
+h4 {
+  a {
+    color: white;
+  }
 }
 
 label{
@@ -103,4 +107,15 @@ span.picture {
 
 .dibber_info{
   padding-left: 60px;
+}
+
+.dibber_pic{
+  display: block;
+}
+
+///////////////////////// Media Queries /////////////////
+@media(min-width: 320px) and (max-width: 767px){
+  .dibber_pic{
+    display: none;
+  }
 }

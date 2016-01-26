@@ -7,14 +7,16 @@
 
 <% @dibs.each do |dib|%>
  <div class="row">
-   <div class="col-sm-2 col-sm-offset-2 all-white">
-     <section class="dibber_info center">
-       <%= gravatar_for dib.dibber, size:100 %>
-       <h5 id:"index_dibber_name"> Dibber: <%= dib.dibber.name %> </h5>
-     </section>
+   <div class="dibber_pic">
+     <div class="col-xs-2 all-white">
+       <section class="dibber_info center">
+         <%= gravatar_for dib.dibber, size:100 %>
+         <h5 id:"index_dibber_name"> Dibber: <%= dib.dibber.name %> </h5>
+       </section>
+     </div>
    </div>
 
-   <div class="col-sm-4 col-sm-offset-1 well all-white">
+   <div class="col-xs-6 col-xs-offset-1 well all-white">
      <h4><%= link_to dib.name, dib_path(dib) %> </h4>
      <p><%= dib.note %></p>
      <p>
@@ -29,6 +31,7 @@
    </div>
 
  </div>
+ <hr>
 <% end %>
 
 <%= will_paginate %>
