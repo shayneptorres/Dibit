@@ -5,15 +5,17 @@
 
 <%= will_paginate %>
 
+
 <% @dibbers.each do |dibber|%>
  <div class="row">
    <div class="col-sm-2 col-sm-offset-2 all-white">
      <section class="dibber_info center">
        <%= gravatar_for dibber, size:100 %>
-       <h5 id:"index_dibber_name"> Dibber: <%= dibber.name %> </h5>
+       <h5 id:"index_dibber_name"> Dibber: <%= link_to dibber.name, dibber_path(dibber) %>
+       </h5>
      </section>
    </div>
-
+<div class="dibber_stats">
    <div class="col-sm-4 col-xs-offset-1 well all-white">
      <h4>
        <%= link_to dibber.name, dibber_path(dibber) %>
@@ -24,7 +26,7 @@
        <span class="quiet pull-right"><small>Updated <%= time_ago_in_words(dibber.updated_at) %> ago</small></span>
      </p>
    </div>
-
+</div>
  </div>
 <% end %>
 

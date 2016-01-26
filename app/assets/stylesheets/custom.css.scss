@@ -115,7 +115,24 @@ span.picture {
 
 ///////////////////////// Media Queries /////////////////
 @media(min-width: 320px) and (max-width: 767px){
+  #navbar{
+    height: 225px;
+  }
+  .navbar-right{
+    li{
+      top:115px;
+    }
+  }
+  .navbar-header{
+    background-color: #0000B8;
+  }
+  .navbar-nav{
+      height: 40px;
+  }
   .dibber_pic{
+    display: none;
+  }
+  .dibber_stats{
     display: none;
   }
 }

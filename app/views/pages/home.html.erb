@@ -1,7 +1,14 @@
 <div>
   <div class="jumbotron">
-    <center><h1>Welcome to DibIt!</h1></center>
-    <center><h3>Respect all dibs, Ye who enter here!<h3></center>
+    <% if logged_in? %>
+      <center><h1>Sup, <%= current_user.name %>!</h1></center>
+      <center><h3>Welcome Back to Dibit</h3></center>
+    <% else %>
+      <center><h1>Welcome to DibIt!</h1></center>
+      <center><h3>Respect all dibs, Ye who enter here!<h3></center>
+    <% end %>
+
+
       <% if logged_in? %>
         <center><%= link_to "View Dibs", dibs_path, class: "btn btn-lg btn-success viewer"%></center>
       <% else  %>

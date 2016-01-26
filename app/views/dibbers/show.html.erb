@@ -14,9 +14,7 @@
   </div>
 </div>
 
-
 <% @dibber.dibs.each do |dib| %>
-
   <div class="row">
     <div class="col-lg-4 well col-lg-offset-4 all-white">
       <h4><%= link_to dib.name, dib_path(dib) %> </h4>
@@ -26,7 +24,10 @@
 
         <span class="quiet pull-right"><small>Updated <%= time_ago_in_words(dib.updated_at) %> ago</small></span>
       </p>
-
     </div>
   </div>
 <% end %>
+<hr>
+<center><%= link_to "Go back to dibs", dibs_path, class: "btn btn-lg btn-success viewer"%></center>
+<br>
+<center><%= link_to "Go back to dibbers", dibbers_path, class: "btn btn-lg btn-success viewer"%></center>
