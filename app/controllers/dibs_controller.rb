@@ -50,18 +50,14 @@ class DibsController < ApplicationController
     end
   end
 
-  def destroy
-    if @dib.dibber != current_user
-      redirect_to dib_path(@dib)
-      flash[:danger] = "You do not have permission to destroy this dib!"
-    end
+  def delete
     @dib=Dib.friendly.find(params[:id])
     @dib.destroy
-    if  @dib.destroy(dib_params)
+    if @dib.destroy
       flash[:success] = "Your dib was deleted successfully!"
       redirect_to dibs_path
     else
-      render :show
+      render :index
     end
   end
 

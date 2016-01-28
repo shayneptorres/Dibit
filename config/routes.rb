@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get "/home", to: 'pages#home'
   get '/me', to: 'dibbers#me', as: 'me'
+  get '/gravatar', to: 'dibbers#gravatar', as: 'gravatar'
   #get '/dibs', to: 'dibs#index'
   #get '/dibs/new', to: 'dibs#new', as: 'new_dib'
   #post '/dibs', to: 'dibs#create'
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
 
 
   resources :dibs
-  delete '/dibs/:id', to: 'dibs#destroy', as: 'destroy_dib'
+  delete '/dibs/:id', to: 'dibs#delete', as: 'delete_dib'
 
   resources :dibbers, except: [:new]
 
