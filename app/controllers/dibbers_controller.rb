@@ -13,7 +13,7 @@ class DibbersController < ApplicationController
     if @dibber.save
       flash[:success] = "You are now a Dibber, go dib stuff!"
       session[:dibber_id] = @dibber.id
-      redirect_to dibs_path
+      redirect_to gravatar_path
     else
       render 'new'
     end

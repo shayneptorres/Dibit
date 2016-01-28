@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get "/home", to: 'pages#home'
   get '/me', to: 'dibbers#me', as: 'me'
+  get '/gravatar', to: 'dibbers#gravatar', as: 'gravatar'
   #get '/dibs', to: 'dibs#index'
   #get '/dibs/new', to: 'dibs#new', as: 'new_dib'
   #post '/dibs', to: 'dibs#create'
