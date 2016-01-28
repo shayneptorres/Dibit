@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
 
   resources :dibs
-  delete '/dibs/:id', to: 'dibs#destroy', as: 'destroy_dib'
+  delete '/dibs/:id', to: 'dibs#delete', as: 'delete_dib'
 
   resources :dibbers, except: [:new]
 
