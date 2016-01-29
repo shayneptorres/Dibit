@@ -33,5 +33,5 @@
 <% if logged_in? && @dib.dibber == current_user %>
   <center><%= link_to "Edit Dib", edit_dib_path, class: "btn btn-lg btn-success viewer"%></center>
   <br>
-  <center><%= link_to "Delete Dib", delete_dib_path, :confirm => "are u sure?", class: "btn btn-lg btn-danger viewer"%></center>
+  <center><%= link_to "Delete Dib", @dib, method: :delete, data: {:confirm => "are u sure?"}, class: "btn btn-lg btn-danger viewer"%></center>
 <% end %>

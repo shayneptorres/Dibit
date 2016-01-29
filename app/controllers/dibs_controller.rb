@@ -50,7 +50,7 @@ class DibsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @dib=Dib.friendly.find(params[:id])
     @dib.destroy
     if @dib.destroy
