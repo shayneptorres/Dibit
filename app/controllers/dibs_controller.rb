@@ -34,10 +34,7 @@ class DibsController < ApplicationController
 
   def edit
     @dib= Dib.friendly.find(params[:id])
-    if @dib.dibber != current_user
-      redirect_to dib_path(@dib)
-      flash[:danger] = "You do not have permission to edit this dib!"
-    end
+    authorize! :read, @article
   end
 
   def update
