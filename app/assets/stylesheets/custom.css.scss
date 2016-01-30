@@ -116,6 +116,11 @@ span.picture {
 .dibber_pic{
   display: block;
 }
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
 
 ///////////////////////// Media Queries /////////////////
 @media(min-width: 320px) and (max-width: 767px){
@@ -139,4 +144,26 @@ span.picture {
   .dibber_stats{
     display: none;
   }
+  .well{
+    .all-white{
+      .index_dibber_name{
+        h5{color: white;}
+      }
+    }
+  }
+.gravatar{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+}
+@media(min-width: 767px){
+  .well{
+    .all-white{
+      h5{
+        display: none;
+      }
+    }
+  }
+
 }
