@@ -151,12 +151,12 @@ hr{
       }
     }
   }
-.gravatar{
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  max-width: 350px;
-}
+  .gravatar{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 300px;
+  }
 }
 @media(min-width: 767px){
   .well{
