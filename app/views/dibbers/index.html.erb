@@ -8,15 +8,19 @@
 
 <% @dibbers.each do |dibber|%>
  <div class="row">
-   <div class="col-sm-2 col-sm-offset-2 all-white">
-     <section class="dibber_info center">
+   <div class="col-xs-12 all-white">
+     <section class="dibber_info">
        <%= gravatar_for dibber, size:100 %>
-       <h5 id:"index_dibber_name"> Dibber: <%= link_to dibber.name, dibber_path(dibber) %>
-       </h5>
+       <center>
+         <h5 id:"index_dibber_name"> Dibber: <%= link_to dibber.name, dibber_path(dibber) %>
+         </h5>
+       </center>
+       <br>
      </section>
    </div>
+
 <div class="dibber_stats">
-   <div class="col-sm-4 col-xs-offset-1 well all-white">
+   <div class="col-xs-12 well all-white">
      <h4>
        <%= link_to dibber.name, dibber_path(dibber) %>
      </h4>

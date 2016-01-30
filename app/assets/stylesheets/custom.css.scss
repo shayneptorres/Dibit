@@ -141,6 +141,9 @@ hr{
   .dibber_pic{
     display: none;
   }
+  .dibber_info{
+    padding-left: 0px;
+  }
   .dibber_stats{
     display: none;
   }
@@ -149,6 +152,11 @@ hr{
       .index_dibber_name{
         h5{color: white;}
       }
+    }
+  }
+  .jumbotron{
+    a{
+      color: white;
     }
   }
   .gravatar{
