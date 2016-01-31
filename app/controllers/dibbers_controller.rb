@@ -16,7 +16,7 @@ class DibbersController < ApplicationController
       if @dibber.super_admin?
         flash[:success] = "You have Admin Powers, go do admin things!"
       end
-      redirect_to gravatar_path
+      redirect_to me_path
     else
       render 'new'
     end
