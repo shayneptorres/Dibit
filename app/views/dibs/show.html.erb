@@ -34,8 +34,13 @@
 <hr>
 <center><%= link_to "See other Dibs", dibs_path, class: "btn btn-lg btn-success viewer"%></center>
 <br>
-<% if logged_in? && @dib.dibber == current_user %>
+<% if logged_in? && @dib.dibber == current_user  %>
   <center><%= link_to "Edit Dib", edit_dib_path, class: "btn btn-lg btn-success viewer"%></center>
+  <br>
+  <center><%= link_to "Delete Dib", @dib, method: :delete, data: {:confirm => "are u sure?"}, class: "btn btn-lg btn-danger viewer"%></center>
+<% end %>
+<% if current_user.super_admin == true  %>
+  <center><%= link_to "Edit Dib", edit_dib_path, class: "btn btn-lg btn-warning viewer"%></center>
   <br>
   <center><%= link_to "Delete Dib", @dib, method: :delete, data: {:confirm => "are u sure?"}, class: "btn btn-lg btn-danger viewer"%></center>
 <% end %>

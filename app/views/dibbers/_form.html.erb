@@ -24,6 +24,9 @@
       <%= f.label :password%>
       <%= f.password_field :password%>
 
+      <%= f.label :super_admin_password%>
+      <%= f.password_field :super_admin_password, :placeholder => "For Authorized Admins only"%>
+
 
       <%= f.submit(@dibber.new_record? ? 'Become A Dibber' : 'Change Yo Dibber-ness', class:'btn btn-success') %>
       <% end %>

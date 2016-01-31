@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160126071727) do
+ActiveRecord::Schema.define(version: 20160131094515) do
 
   create_table "dibbers", force: :cascade do |t|
     t.string   "name"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20160126071727) do
     t.datetime "updated_at"
     t.string   "password_digest"
     t.string   "slug"
+    t.boolean  "super_admin"
+    t.string   "super_admin_password"
   end
 
   add_index "dibbers", ["slug"], name: "index_dibbers_on_slug"

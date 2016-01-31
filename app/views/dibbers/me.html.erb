@@ -28,3 +28,6 @@
   </div>
 <% end %>
 <hr>
+<% if current_user.super_admin = true || (logged_in? && @dib.dibber == current_user)  %>
+  <center><%= link_to "Edit Yo self", edit_dibber_path(@dibber), class: "btn btn-lg btn-success viewer"%></center>
+<% end %>

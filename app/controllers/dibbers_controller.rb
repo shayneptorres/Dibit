@@ -13,6 +13,9 @@ class DibbersController < ApplicationController
     if @dibber.save
       flash[:success] = "You are now a Dibber, go dib stuff!"
       session[:dibber_id] = @dibber.id
+      if @dibber.super_admin?
+        flash[:success] = "You have Admin Powers, go do admin things!"
+      end
       redirect_to gravatar_path
     else
       render 'new'
@@ -23,7 +26,6 @@ class DibbersController < ApplicationController
     @dibber = Dibber.friendly.find(params[:id])
     if @dibber != current_user
       redirect_to dibber_path(@dibber)
-      flash[:danger] = "You do not have permission to edit this dibber!"
     end
   end
 
@@ -51,7 +53,7 @@ class DibbersController < ApplicationController
 
   private
   def dibber_params
-    params.require(:dibber).permit(:name, :email, :password)
+    params.require(:dibber).permit(:name, :email, :password, :super_admin_password)
   end
 
 end

@@ -31,3 +31,11 @@
 <center><%= link_to "Go back to dibs", dibs_path, class: "btn btn-lg btn-success viewer"%></center>
 <br>
 <center><%= link_to "Go back to dibbers", dibbers_path, class: "btn btn-lg btn-success viewer"%></center>
+<% if logged_in? && @dibber == current_user %>
+<br>
+  <center><%= link_to "Edit Yo self", edit_dibber_path(@dibber), class: "btn btn-lg btn-warning viewer"%></center>
+<% end %>
+<% if current_user.super_admin == true %>
+<br>
+  <center><%= link_to "Edit This Dibber", edit_dibber_path(@dibber), class: "btn btn-lg btn-warning viewer"%></center>
+<% end %>
