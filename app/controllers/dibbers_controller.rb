@@ -5,7 +5,7 @@ class DibbersController < ApplicationController
   end
 
   def index
-    @dibbers=Dibber.paginate(page: params[:page], per_page: 5)
+    @dibbers=Dibber.paginate(page: params[:page], per_page: 6)
   end
 
   def create

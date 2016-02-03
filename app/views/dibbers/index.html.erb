@@ -4,23 +4,20 @@
 </div>
 
 <%= will_paginate %>
-
-
-<% @dibbers.each do |dibber|%>
  <div class="row">
-   <div class="col-xs-12 all-white">
-     <section class="dibber_info">
+   <% @dibbers.each do |dibber|%>
+   <div class="col-xs-6 all-white">
+     <div class="dibber_info">
        <%= gravatar_for dibber, size:100 %>
        <center>
          <h5 id:"index_dibber_name"> Dibber: <%= link_to dibber.name, dibber_path(dibber) %>
          </h5>
        </center>
        <br>
-     </section>
+     </div>
    </div>
-
 <div class="dibber_stats">
-   <div class="col-xs-12 well all-white">
+   <!-- <div class="col-xs-5 well all-white"> -->
      <h4>
        <%= link_to dibber.name, dibber_path(dibber) %>
      </h4>
@@ -29,9 +26,8 @@
 
        <span class="quiet pull-right"><small>Updated <%= time_ago_in_words(dibber.updated_at) %> ago</small></span>
      </p>
-   </div>
+   <!-- </div> -->
 </div>
- </div>
 <% end %>
-
+ </div>
 <%= will_paginate %>

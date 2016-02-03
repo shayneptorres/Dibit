@@ -69,6 +69,12 @@ h5{
   color: white;
   padding-left: 15px;
 }
+.check-circle{
+  .fa-check-circle-o{
+    float: right;
+  }
+}
+
 
 .well {
   background-color: #0000B8;
@@ -159,8 +165,13 @@ hr{
   }
   .well{
     .all-white{
+      a{
+        color: white;
+      }
       .index_dibber_name{
-        h5{color: white;}
+        h5{
+          color: white;
+        }
       }
     }
   }

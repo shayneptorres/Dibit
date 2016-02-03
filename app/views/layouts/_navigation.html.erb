@@ -12,20 +12,20 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="nav navbar-nav">
-          <li><i class="fa fa-home"><%= link_to " Home", root_path %></i></li>
+          <li><i class="fa fa-home"><%= link_to "  Home", root_path %></i></li>
           <% if logged_in? %>
-            <li><i class="fa fa-users"><%= link_to " Dibbers", dibbers_path %></i></li>
-            <li><i class="fa fa-list"><%= link_to " Dibs", dibs_path %></i></li>
-            <li><i class="fa fa-check-square"><%= link_to " DibIt!", new_dib_path %></i></li>
+            <li><i class="fa fa-users"><%= link_to "  Dibbers", dibbers_path %></i></li>
+            <li><i class="fa fa-list"><%= link_to "  Dibs", dibs_path %></i></li>
+            <li><i class="fa fa-check-square"><%= link_to "  DibIt!", new_dib_path %></i></li>
           <% end %>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if !logged_in? %>
-            <li><%= link_to "Log in", login_path %></li>
-            <li><%= link_to "Sign Up", register_path %></li>
+            <li><i class="fa fa-sign-in"><%= link_to "  Log in", login_path %></i></li>
+            <li><i class="fa fa-user-plus"><%= link_to "  Sign Up", register_path %></i></li>
           <% else %>
-            <li><i class="fa fa-user"><%= link_to " Me", me_path %></i></li>
-            <li><i class="fa fa-sign-out"><%= link_to " Log out", logout_path %></i></li>
+            <li><i class="fa fa-user"><%= link_to "  Me", me_path %></i></li>
+            <li><i class="fa fa-sign-out"><%= link_to "  Log out", logout_path %></i></li>
           <% end %>
         </ul>
       </div><!-- /.navbar-collapse -->

@@ -18,12 +18,15 @@
 
    <div class="col-xs-12 well all-white">
      <h4><%= link_to dib.name, dib_path(dib) %></h4>
+     <div class="check-circle">
+       <i class="fa fa-check-circle-o"></i>
+     </div>
      <p><%= dib.note %></p>
      <p>
        <span class="quiet"><small>Called <%= time_ago_in_words(dib.created_at) %> ago</small></span>
 
        <span class="quiet pull-right" id="updated_at"><small>Updated <%= time_ago_in_words(dib.updated_at) %> ago</small></span>
-         <h5 class="all-white"> Dibber: <%= dib.dibber.name %> </h5>
+         <h5 class="all-white"> Dibber: <%= link_to dib.dibber.name, dibber_path(dib.dibber) %> </h5>
      </p>
    </div>
 
