@@ -32,6 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'friendly_id'
 gem 'fog', '1.36.0'
 gem 'dotenv-rails'
+gem 'font-awesome-sass', '~> 4.4.0'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
