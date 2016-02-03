@@ -4,7 +4,7 @@ class Dibber < ActiveRecord::Base
   has_many :dibs
   #this saves all the email in the database as downcase
   before_save {self.email = self.email.downcase }
-  before_save {if self.super_admin_password === "Yw/;&6dQEi4tX&LcuiC9k*B4mrNKY4"
+  before_save {if self.super_admin_password === ENV['SECRET_SUPER_ADMIN']
                 self.super_admin = true
               end }
   validates :name, presence: true, length: {minimum: 3, maximum: 40}
