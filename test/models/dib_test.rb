@@ -29,26 +29,4 @@ class DibTest < ActiveSupport::TestCase
     @dib.name="aaaa"
     assert_not @dib.valid?
   end
-
-  test "note should be present" do
-    @dib.note=" "
-    assert_not @dib.valid?
-  end
-
-  test "note should not be too long" do
-    @dib.note= "a"*151
-    assert_not @dib.valid?
-  end
-
-  test "note must not be too short" do
-    @dib.note="aaaa"
-    assert_not @dib.valid?
-  end
-
-
-
-
-
-
-
 end
