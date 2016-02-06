@@ -58,9 +58,10 @@ class DibsController < ApplicationController
     end
   end
 
+
   private
   def dib_params
-    params.require(:dib).permit(:name, :note, :picture)
+    params.require(:dib).permit(:name, :note, :picture, :rank)
   end
 
 end

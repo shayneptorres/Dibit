@@ -186,6 +186,8 @@ GEM
     font-awesome-sass (4.4.0)
       sass (>= 3.2)
     formatador (0.2.5)
+    formtastic (3.1.3)
+      actionpack (>= 3.2.13)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     globalid (0.3.6)
@@ -300,6 +302,7 @@ DEPENDENCIES
   dotenv-rails
   fog (= 1.36.0)
   font-awesome-sass (~> 4.4.0)
+  formtastic (~> 3.0)
   friendly_id
   jbuilder (~> 2.0)
   jquery-rails

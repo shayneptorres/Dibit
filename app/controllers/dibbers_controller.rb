@@ -45,6 +45,7 @@ class DibbersController < ApplicationController
       redirect_to root_path
       flash[:danger] = "You must be logged in to view these dibbers!"
     end
+    @dibber.dibs = @dibber.dibs(:order => 'rank', :limit => 20)
   end
 
   def me
