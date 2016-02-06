@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160131094515) do
+ActiveRecord::Schema.define(version: 20160206222030) do
 
   create_table "dibbers", force: :cascade do |t|
     t.string   "name"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20160131094515) do
     t.integer  "dibber_id"
     t.string   "picture"
     t.string   "slug"
+    t.integer  "rank"
   end
 
   add_index "dibs", ["slug"], name: "index_dibs_on_slug"
