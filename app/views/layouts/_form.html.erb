@@ -21,8 +21,8 @@
       <%= f.label :note%>
       <%= f.text_field :note%>
 
-      <%= f.label :rank %>
-      <%= f.select_tag(:rank, options_for_select([['Choose a rank for your dib',100],['1',1],['2',2],['3',3],['4',4],['5',5]]))%>
+      <!-- <%= f.label :rank %>
+      <%= f.select(:rank, options_for_select([['Choose a rank for your dib',100],['1',1],['2',2],['3',3],['4',4],['5',5]])) %> -->
 
       <span class="picture">
         <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png" %>
