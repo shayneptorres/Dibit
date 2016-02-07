@@ -14,11 +14,6 @@
   </div>
 </div>
 
-<!-- <ul class="nav nav-tabs">
-  <li class="active"><%= link_to "Most Recent", dibber_path(@dibber) %></li>
-  <li><%= link_to "Highest Ranked", show_ranked_path(@dibber) %></li>
-</ul> -->
-
 <% @dibber.dibs.order(updated_at: :desc).each do |dib| %>
   <div class="row">
     <div class="col-lg-4 well col-lg-offset-4 all-white">

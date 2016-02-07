@@ -47,14 +47,6 @@ class DibbersController < ApplicationController
     end
   end
 
-  def show_ranked
-    @dibber = Dibber.friendly.find(params[:id])
-    if !logged_in?
-      redirect_to root_path
-      flash[:danger] = "You must be logged in to view these dibbers!"
-    end
-  end
-
   def me
     @dibber = current_user
   end
