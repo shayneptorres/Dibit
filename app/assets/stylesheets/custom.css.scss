@@ -10,7 +10,6 @@ h5{
 #navbar{
   background-color: #0000B8;
   li {
-    padding-top: 20px;
     a {
       color: white;
     }
@@ -190,6 +189,15 @@ hr{
   }
 }
 @media(min-width: 767px){
+  #navbar{
+    background-color: #0000B8;
+    li {
+      padding-top: 20px;
+      a {
+        color: white;
+      }
+    }
+  }
   .well{
     .all-white{
       h5{
