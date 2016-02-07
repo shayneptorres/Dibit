@@ -205,8 +205,10 @@ hr{
     margin-right: auto;
     display: inline-block;
   }
-  .dibber_stats{
-
+  .me{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .gravatar{
     width: 100px;
@@ -218,6 +220,14 @@ hr{
           height: 160px;
       }
   }
+.tabs{
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  .nav_tabs{
+
+  }
+}
   .well{
     .all-white{
       h5{

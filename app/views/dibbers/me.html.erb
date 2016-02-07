@@ -14,13 +14,16 @@
     <hr/>
   </div>
 </div>
-<h2>Here be your dibs:</h2>
 
-<ul class="nav nav-tabs">
-  <li class="active"><%= link_to "Most Recent", me_path %></li>
-  <li><%= link_to "Highest Ranked", me_ranked_path %></li>
-</ul>
- 
+<div class="tabs">
+  <h2>Here be your dibs:</h2>
+  <ul class="nav nav-tabs">
+    <li class="active"><%= link_to "Most Recent", me_path %></li>
+    <li><%= link_to "Highest Ranked", me_ranked_path %></li>
+  </ul>
+</div>
+
+
 <% @dibber.dibs.order(updated_at: :desc ).each do |dib| %>
   <div class="row">
     <div class="col-lg-4 well col-lg-offset-4 all-white">
