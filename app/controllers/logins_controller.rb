@@ -7,7 +7,7 @@ class LoginsController < ApplicationController
     if dibber && dibber.authenticate(params[:password])
       session[:dibber_id] = dibber.id
       flash[:success] = "You have successfully logged in!"
-      redirect_to dibs_path
+      redirect_to new_dib_path
 
     else
       flash.now[:danger] = "Your email adress or password do not match!"
