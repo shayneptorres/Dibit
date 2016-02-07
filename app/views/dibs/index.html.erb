@@ -19,7 +19,9 @@
    <div class="col-xs-12 well all-white">
      <h4><%= link_to dib.name, dib_path(dib) %></h4>
      <div class="check-circle">
-       <i class="fa fa-check-circle-o"></i>
+       <% if dib.rank && dib.rank < 6 %>
+         <i class="fa fa-check-circle-o"></i>
+       <% end %>
      </div>
      <p><%= dib.note %></p>
      <p>
