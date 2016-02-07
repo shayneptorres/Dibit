@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get "/home", to: 'pages#home'
   get '/me', to: 'dibbers#me', as: 'me'
+  get '/me_ranked', to: 'dibbers#me_ranked', as: 'me_ranked'
   get '/gravatar', to: 'dibbers#gravatar', as: 'gravatar'
   #get '/dibs', to: 'dibs#index'
   #get '/dibs/new', to: 'dibs#new', as: 'new_dib'
@@ -19,6 +20,7 @@ Rails.application.routes.draw do
   resources :dibbers, except: [:new]
 
   get '/register', to: "dibbers#new"
+  get '/show_ranked_dibs', to: "dibbers#show_ranked", as: "show_ranked"
 
   get '/login', to: "logins#new"
   post '/login', to: "logins#create"

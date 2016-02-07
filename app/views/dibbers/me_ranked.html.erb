@@ -17,11 +17,11 @@
 <h2>Here be your dibs:</h2>
 
 <ul class="nav nav-tabs">
-  <li class="active"><%= link_to "Most Recent", me_path %></li>
-  <li><%= link_to "Highest Ranked", me_ranked_path %></li>
+  <li><%= link_to "Most Recent", me_path %></li>
+  <li class="active"><%= link_to "Highest Ranked", me_ranked_path %></li>
 </ul>
- 
-<% @dibber.dibs.order(updated_at: :desc ).each do |dib| %>
+
+<% @dibber.dibs.order(:rank ).each do |dib| %>
   <div class="row">
     <div class="col-lg-4 well col-lg-offset-4 all-white">
       <h4><%= link_to dib.name, dib_path(dib) %> </h4>

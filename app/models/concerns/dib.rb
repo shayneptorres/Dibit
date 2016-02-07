@@ -6,7 +6,7 @@ class Dib < ActiveRecord::Base
   validates :name, presence: true, uniqueness: {case_sensitive: false}, length: {minimum: 3, maximum:100}
   mount_uploader :picture, PictureUploader
   validate :picture_size
-  default_scope -> {order(updated_at: :desc)}
+  # default_scope -> {order(updated_at: :desc)}
 
   private
   def picture_size

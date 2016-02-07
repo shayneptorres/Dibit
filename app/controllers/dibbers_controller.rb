@@ -45,10 +45,21 @@ class DibbersController < ApplicationController
       redirect_to root_path
       flash[:danger] = "You must be logged in to view these dibbers!"
     end
-    @dibber.dibs = @dibber.dibs(:order => 'rank', :limit => 20)
+  end
+
+  def show_ranked
+    @dibber = Dibber.friendly.find(params[:id])
+    if !logged_in?
+      redirect_to root_path
+      flash[:danger] = "You must be logged in to view these dibbers!"
+    end
   end
 
   def me
+    @dibber = current_user
+  end
+
+  def me_ranked
     @dibber = current_user
   end
 

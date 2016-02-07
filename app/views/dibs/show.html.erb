@@ -27,7 +27,7 @@
         <h5 class="show_name">
           It belongs to: <%= @dib.dibber.name %>
         </h5>
-        <% if @dib.rank %>
+        <% if @dib.rank && @dib.rank < 6 %>
           <h3>Ranked: <%= @dib.rank %></h3>
         <% end %>
       </center>

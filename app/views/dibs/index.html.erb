@@ -5,7 +5,7 @@
 
 <%= will_paginate %>
 
-<% @dibs.each do |dib|%>
+<% @dibs.order(created_at: :desc ).each do |dib|%>
  <div class="row">
    <div class="dibber_pic">
      <div class="col-xs-2 all-white">

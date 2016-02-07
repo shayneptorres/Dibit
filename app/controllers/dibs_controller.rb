@@ -34,7 +34,6 @@ class DibsController < ApplicationController
 
   def edit
     @dib= Dib.friendly.find(params[:id])
-    # authorize! :read, @article
   end
 
   def update
