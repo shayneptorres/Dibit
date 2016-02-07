@@ -20,8 +20,7 @@ Rails.application.routes.draw do
   resources :dibbers, except: [:new]
 
   get '/register', to: "dibbers#new"
-  get '/show_ranked_dibs', to: "dibbers#show_ranked", as: "show_ranked"
-
+  
   get '/login', to: "logins#new"
   post '/login', to: "logins#create"
   get '/logout', to: "logins#destroy"
