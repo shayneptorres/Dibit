@@ -14,7 +14,7 @@
   </div>
 </div>
 
-<% @dibber.dibs.order(updated_at: :desc).each do |dib| %>
+<% @dibber.dibs.order(:rank).each do |dib| %>
   <div class="row">
     <div class="col-lg-4 well col-lg-offset-4 all-white">
       <h4><%= link_to dib.name, dib_path(dib) %> </h4>
